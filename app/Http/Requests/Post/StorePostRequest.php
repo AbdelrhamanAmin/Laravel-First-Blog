@@ -3,6 +3,8 @@
 namespace App\Http\Requests\Post;
 
 use Illuminate\Foundation\Http\FormRequest;
+use App\Post;
+use App\User;
 
 class StorePostRequest extends FormRequest
 {
@@ -24,7 +26,7 @@ class StorePostRequest extends FormRequest
     public function rules()
     {
         return [
-                'title' =>'required | min:3',
+                'title' =>'required | min:3 | unique:posts',
                 'description' =>'required'
         ];
     }
