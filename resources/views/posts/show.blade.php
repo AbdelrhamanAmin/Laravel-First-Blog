@@ -18,7 +18,7 @@
     <p class="card-text"><strong> Name:</strong> {{ $post->user->name}}</p>
     <p class="card-text"><strong> email:</strong> {{$post->user->email}}</p>
     <p class="card-text"><strong> Created :</strong> {{$post->human_readable_date}}</p>
-
+    <p class="card-text"><strong> Last Update :</strong> {{$post->updated_at->diffForHumans()}}</p>
     @endif
 </div>
   </div>

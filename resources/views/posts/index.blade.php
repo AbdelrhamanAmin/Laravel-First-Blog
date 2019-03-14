@@ -10,6 +10,7 @@
             <th scope="col">Description</th>
             <th scope="col">Creator Name</th>
             <th> Created at</th>
+            <th> Last Update</th>
             <th> Slug </th>
             <th> Action </th>
         </tr>
@@ -22,6 +23,7 @@
         <td> {{$post->description}}</td>
         <td> {{ isset($post->user) ? $post->user->name : 'Not Found'}}</td>
         <td> {{$post->created_at->toDateString()}}</td>
+        <td> {{$post->updated_at->diffForHumans()}}</td>
         <td> {{$post->slug}}</td>
         <td>
             <a href="{{route('posts.edit' ,[$post->id   ]) }}" class="btn btn-primary"> Edit</a>
