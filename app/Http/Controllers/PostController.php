@@ -27,10 +27,12 @@ class PostController extends Controller
         ]);
     }
 
-    public function store()
+    public function store(StorePostRequest $request)
     {
         // dd(request()->all());
-        Post::create(request()->all());
+        // Post::create(request()->all());
+
+        Post::create($request->all());
 
         return redirect()->route('posts.index');
     }
