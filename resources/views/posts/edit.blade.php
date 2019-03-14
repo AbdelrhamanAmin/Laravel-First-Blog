@@ -9,7 +9,7 @@
 
         <div class="form-group">
             <label for="exampleInputEmail1">Title</label>
-            <input name="title" value="{{$post->title}}" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Title">
+            <input name="title" value="{{$post->title}}" type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Title">
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Description</label>
@@ -20,4 +20,3 @@
     </form>
 
 @endsection
- 
