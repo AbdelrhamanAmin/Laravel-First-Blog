@@ -81,7 +81,8 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Ay 7aga
+                    WELCOME Home
+                    <h3>please sign in </h3>
                 </div>
 
                 <div class="links">
