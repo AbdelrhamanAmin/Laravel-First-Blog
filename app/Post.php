@@ -28,4 +28,10 @@ class Post extends Model
             ]
         ];
     }
+
+    public function getHumanReadableDateAttribute()
+    {
+        // return $this->created_at->toDayDateTimeString();
+        return $this->created_at->format('l jS \\of F Y h:i:s A');
+    }
 }
