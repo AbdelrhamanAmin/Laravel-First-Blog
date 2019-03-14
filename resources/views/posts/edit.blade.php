@@ -1,4 +1,4 @@
- @extends('layout.app')
+ @extends('layouts.app')
 
  @section('content')
  <a href="{{route('posts.index')}}" class="btn btn-danger">Back</a>
