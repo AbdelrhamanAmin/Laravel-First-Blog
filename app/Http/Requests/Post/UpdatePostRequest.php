@@ -3,6 +3,7 @@
 namespace App\Http\Requests\Post;
 
 use Illuminate\Foundation\Http\FormRequest;
+use App\Post;
 
 class UpdatePostRequest extends FormRequest
 {
@@ -23,8 +24,9 @@ class UpdatePostRequest extends FormRequest
      */
     public function rules()
     {
+        // dd($this->post);
         return [
-            'title' =>'required | min:3 |unique:posts',
+            'title' =>'required | min:3 | unique:posts,id,' .$this->post,
             'description' =>'required'
         ];
     }
@@ -33,7 +35,7 @@ class UpdatePostRequest extends FormRequest
         return [
         'title.required' => 'Title Field Is Required',
         'tilte.min' => 'Min Title is 3 characters   ',
-        'description.required' =>'Description Field IS Required'
+        'description.required' =>'Description Field is Required'
         ];
     }
 }

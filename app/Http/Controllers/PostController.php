@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Post;
 use App\User;
 use App\Http\Requests\Post\StorePostRequest;
+use App\Http\Requests\Post\UpdatePostRequest;
 
 class PostController extends Controller
 {
@@ -46,7 +47,7 @@ class PostController extends Controller
             ]);
     }
 
-    public function update($id, StorePostRequest $request)
+    public function update($id, UpdatePostRequest $request)
     {
         $post = Post::find($id);
         $post->update($request->all());
