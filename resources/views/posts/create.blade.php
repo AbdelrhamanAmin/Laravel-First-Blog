@@ -1,13 +1,4 @@
  @extends('layout.app')
-     @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
 
  @section('content')
  <a href="{{route('posts.index')}}" class="btn btn-danger">Back</a>

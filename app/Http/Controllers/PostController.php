@@ -46,10 +46,10 @@ class PostController extends Controller
             ]);
     }
 
-    public function update($id)
+    public function update($id, StorePostRequest $request)
     {
         $post = Post::find($id);
-        $post->update(request()->all());
+        Post::create($request->all());
         // dd($post);
         // return view ('posts.index');
         return redirect()->route('posts.index');
