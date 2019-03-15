@@ -2,8 +2,6 @@
 
  @section('content')
  <a href="{{route('posts.index')}}" class="btn btn-danger">Back</a>
-
- {{-- {{$post->user}} --}}
  <div class="card">
   <div class="card-header">
    <h2><strong> Post Information</strong></h2>

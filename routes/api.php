@@ -16,3 +16,11 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// Route::get('/posts', 'PostController@index'); // we can  handel api req in same web request function bu better to make more controllers
+
+Route::get('/posts', 'Api\PostController@index');
+Route::get('/posts/{post}', 'Api\PostController@show');
+Route::post('/posts', 'Api\PostController@store');
+
+
