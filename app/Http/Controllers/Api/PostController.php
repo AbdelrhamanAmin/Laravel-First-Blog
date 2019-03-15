@@ -13,7 +13,7 @@ class PostController extends Controller
     public function index()
     {
         // return Post::all() ;
-        return PostResource::collection(Post::all());
+        return PostResource::collection(Post::paginate(3));
     }
 
     public function show($post)
@@ -28,7 +28,7 @@ class PostController extends Controller
         Post::create($request->all());
         return response()->json([
             'message' =>' Post Created Successfully'
-        ],201);
+        ], 201);
         // return return response()->json($data, 200, $headers);
     }
 }
