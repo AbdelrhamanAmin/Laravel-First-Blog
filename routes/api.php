@@ -19,7 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 // Route::get('/posts', 'PostController@index'); // we can  handel api req in same web request function bu better to make more controllers
 
-Route::get('/posts', 'Api\PostController@index');
+Route::get('/posts', 'Api\PostController@index')->middleware('auth:api'); 
 Route::get('/posts/{post}', 'Api\PostController@show');
 Route::post('/posts', 'Api\PostController@store');
 
